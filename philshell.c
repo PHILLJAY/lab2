@@ -1,3 +1,5 @@
+#include <stdio.h>
+
 int main (int argc, char **argv)
 {
     //run infinite loop
@@ -24,6 +26,8 @@ int main (int argc, char **argv)
 
 void phil_loop(void)
 {
-    print("P>");
-
+	char str[100];
+	print("P>");
+	scanf("%s", str);
+	printf("\n You entered: %s ", str);
 }
