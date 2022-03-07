@@ -1,5 +1,4 @@
 # Philip Jasionowski, 100751888
 #Operating Systems Lab 2
-philshell: philshell.c philshell.h utility.c
-    gcc -Wall philshell.c utility.c -o philshell
-
+fillshell: fillshell.c fillshell.h utility.c
+	gcc -o myshell fillshell.c utility.c

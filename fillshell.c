@@ -6,23 +6,6 @@ int main (int argc, char **argv)
 {
     //run infinite loop
     fill_loop();
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 //    return EXIT_SUCCESS;
 }
 
