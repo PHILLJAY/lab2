@@ -1,9 +1,11 @@
 #include <stdio.h>
 
+#include "utility.c"
+
 int main (int argc, char **argv)
 {
     //run infinite loop
-    phil_loop();
+    fill_loop();
 
 
 
@@ -21,13 +23,17 @@ int main (int argc, char **argv)
 
 
 
-    return EXIT_SUCCESS;
+//    return EXIT_SUCCESS;
 }
 
-void phil_loop(void)
+void fill_loop(void)
 {
+	//here is the main code, it takes whatever input you give it and stores it in str.
+	//TODO:	decide on command names
+	//TODO:	create a switch that recognizes them
+	//TODO: in utility.c create the functions.
 	char str[100];
-	print("P>");
+	printf("?>");
 	scanf("%s", str);
 	printf("\n You entered: %s ", str);
 }
