@@ -1,8 +1,21 @@
 //Commands yet to be created down below
 //TODO CD <directory - Change directory, if there is no <directory> augment present, print current directory
+void change_dir(char* input){
+	printf("change directory");
+	return;
+}
 //TODO clr - clear screen
+void clear(char* input){
+	printf("screen clear");
+	return;
+}
 //TODO dir <directory> - List contents of <directory>
+void directory (char* input){
+	printg("directory");
+	return;
+}
 //TODO environ - list all envireonment strings
+
 //TODO echo <comment> - display <comment> on the display followed by a new line
 //TODO help - display user manual using the more filter
 //TODO pause - pause operation of the shell until 'enter' is pressed
