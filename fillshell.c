@@ -19,4 +19,6 @@ void fill_loop(void)
 	printf("?>");
 	scanf("%s", str);
 	printf("\n You entered: %s ", str);
+	char* input = strtok(str, " ");
+	printf("\n Your command is %s " , input);
 }
