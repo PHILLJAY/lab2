@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include <string.h>
-#include "utility.c"
+#include "utility.h"
 
 int main (int argc, char **argv)
 {

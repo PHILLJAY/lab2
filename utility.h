@@ -1,4 +1,4 @@
-
+#include <stdio.h>
 
 //Commands yet to be created down below
 //TODO CD <directory - Change directory, if there is no <directory> augment present, print current directory
