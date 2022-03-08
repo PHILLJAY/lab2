@@ -1,5 +1,8 @@
+#include <stdio.h>
+
 //Commands yet to be created down below
 //TODO CD <directory - Change directory, if there is no <directory> augment present, print current directory
+
 void change_dir(char* input){
 	printf("change directory");
 	return;
@@ -11,7 +14,7 @@ void clear(char* input){
 }
 //TODO dir <directory> - List contents of <directory>
 void directory (char* input){
-	printg("directory");
+	printf("directory");
 	return;
 }
 //TODO environ - list all envireonment strings

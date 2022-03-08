@@ -1,6 +1,5 @@
 #include <stdio.h>
 #include <string.h>
-
 #include "utility.c"
 
 int main (int argc, char **argv)
@@ -22,5 +21,4 @@ void fill_loop(void)
 	printf("\n You entered: %s ", str);
 	char* input = strtok(str, " ");
 	printf("\n Your command is %s " , input);
-:
 }
