@@ -4,30 +4,30 @@
 //TODO CD <directory - Change directory, if there is no <directory> augment present, print current directory
 
 void change_dir(char* input){
-	printf("change directory");
+	printf("\nchange directory");
 	return;
 }
 //TODO clr - clear screen
-void clear(char* input){
-	printf("screen clear");
+void clear(){
+	printf("\nscreen clear");
 	return;
 }
 //TODO dir <directory> - List contents of <directory>
 void dir(char* input){
-	printf("directory");
+	printf("\ndirectory");
 	return;
 }
 //TODO environ - list all envireonment strings
 
 void environ(char* input){
-	printf("directory");
+	printf("\ndirectory");
 	return;
 }
 
 //TODO echo <comment> - display <comment> on the display followed by a new line
 
 void echo(char* input){
-	printf("directory");
+	printf("\ndirectory");
 	return;
 }
 
@@ -35,7 +35,7 @@ void echo(char* input){
 //TODO help - display user manual using the more filter
 
 void help(char* input){
-	printf("directory");
+	printf("\ndirectory");
 	return;
 }
 
