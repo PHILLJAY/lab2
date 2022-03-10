@@ -7,9 +7,10 @@ void change_dir(char* input){
 	printf("\nchange directory");
 	return;
 }
-//TODO clr - clear screen
+
 void clear(){
-	printf("\nscreen clear");
+	printf("\033[2J");
+	//printf("\nscreen clear");
 	return;
 }
 //TODO dir <directory> - List contents of <directory>
@@ -20,14 +21,14 @@ void dir(char* input){
 //TODO environ - list all envireonment strings
 
 void environ(char* input){
-	printf("\ndirectory");
+	printf("\nenviron");
 	return;
 }
 
 //TODO echo <comment> - display <comment> on the display followed by a new line
 
 void echo(char* input){
-	printf("\ndirectory");
+	printf("\n");
 	return;
 }
 
@@ -43,14 +44,6 @@ void help(char* input){
 //TODO pause - pause operation of the shell until 'enter' is pressed
 
 void pause(char* input){
-	printf("directory");
-	return;
-}
-
-
-//TODO quit - quit the shell
-
-void quit(char* input){
 	printf("directory");
 	return;
 }

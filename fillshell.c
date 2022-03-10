@@ -39,7 +39,7 @@ void fill_loop(void)
 		} else if (strcmp(input, "pause") == 0){
 			pause(input);
 		} else if (strcmp(input, "quit") == 0){
-			quit(input);
+			printf("\n");
 			break;
 		} else{
 			printf("I dont know that command");
