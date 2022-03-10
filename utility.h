@@ -2,6 +2,11 @@
 
 //Commands yet to be created down below
 //TODO CD <directory - Change directory, if there is no <directory> augment present, print current directory
+void clrKyb(void){
+	char c = 0;
+	while((c = getchar()) != '\n' && c != EOF) {};
+}
+
 
 void change_dir(char* input){
 	printf("\nchange directory");
@@ -18,7 +23,7 @@ void dir(char* input){
 	printf("\ndirectory");
 	return;
 }
-//TODO environ - list all envireonment strings
+//TODO environ - list all environment strings
 
 void environ(char* input){
 	printf("\nenviron");
@@ -44,7 +49,9 @@ void help(char* input){
 //TODO pause - pause operation of the shell until 'enter' is pressed
 
 void pause(char* input){
-	printf("directory");
+	printf("paused, press enter to continue");
+	char enter = 0;
+	clrKyb();
 	return;
 }
 
