@@ -1,0 +1,9 @@
+List of operations you can use:
+===============================================================================	
+cd <directory> - Change the current default directory to chosen <directory>	
+clr - Type to clear the screen	
+dir <directory> - Lists all contents found in chosen <directory>	
+environ - Lists all environment strings	
+pause - Pauses current session until use clicks [ENTER]	
+quit - closes the current shell session	
+===============================================================================

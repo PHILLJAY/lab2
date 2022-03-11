@@ -1,13 +1,12 @@
 #include <stdio.h>
 
 //Commands yet to be created down below
-//TODO CD <directory - Change directory, if there is no <directory> augment present, print current directory
 void clrKyb(void){
 	char c = 0;
 	while((c = getchar()) != '\n' && c != EOF) {};
 }
 
-
+//TODO CD <directory - Change directory, if there is no <directory> augment present, print current directory
 void change_dir(char* input){
 	printf("\nchange directory");
 	return;
@@ -15,12 +14,14 @@ void change_dir(char* input){
 
 void clear(){
 	printf("\033[2J");
-	//printf("\nscreen clear");
+	printf ("\033c");
+	printf("\nscreen cleared");
 	return;
 }
-//TODO dir <directory> - List contents of <directory>
+//Untested dir <directory> - List contents of <directory>
 void dir(char* input){
-	printf("\ndirectory");
+	printf("\ndirectory:\n");
+	for i in $(ls -d */): do echo ${i%%/}; done
 	return;
 }
 //TODO environ - list all environment strings
@@ -41,7 +42,7 @@ void echo(char* input){
 //TODO help - display user manual using the more filter
 
 void help(char* input){
-	printf("\ndirectory");
+	printf "%s" "$(<help.txt)";
 	return;
 }
 
@@ -49,7 +50,7 @@ void help(char* input){
 //TODO pause - pause operation of the shell until 'enter' is pressed
 
 void pause(char* input){
-	printf("paused, press enter to continue");
+	printf("Session Paused, Press [ENTER] to continue");
 	char enter = 0;
 	clrKyb();
 	return;
