@@ -1,48 +1,40 @@
-#include <stdio.h>
-#include <string.h>
-#include <stdbool.h>
-#include "utility.h"
+#include "fillshell.h" 
 
-int main (int argc, char **argv)
+int main (int argc, char *argv[])
 {
-    //run infinite loop
-    fill_loop();
-//    return EXIT_SUCCESS;
-}
-
-void fill_loop(void)
-{
-	//here is the main code, it takes whatever input you give it and stores it in str.
-	//TODO:	decide on command names
-	//TODO:	create a switch that recognizes them
-	//TODO: in utility.c create the functions.
-	
-	char str[100];
-	while(true){
-		printf("\n?>");
-		scanf("%s", str);
-		printf("\n You entered: %s ", str);
-		char* input = strtok(str, " ");
-		//printf("\n Your command is %s " , input);
-		if(strcmp(input, "cd") == 0){
-		change_dir(input);	
-		} else if (strcmp(input, "clr") == 0){
-			clear();
-		} else if (strcmp(input, "dir") == 0){
-			dir(input);	
-		} else if (strcmp(input, "environ") == 0){
-			environ(input);
-		} else if (strcmp(input, "echo") == 0){
-			echo(input);	
-		} else if (strcmp(input, "help") == 0){
-			help(input);	
-		} else if (strcmp(input, "pause") == 0){
-			pause(input);
-		} else if (strcmp(input, "quit") == 0){
-			printf("\n");
-			break;
-		} else{
-			printf("I dont know that command");
-		}
+	char buf[BUFFER], pwd[MAX_ARGS];
+	char shell_path[MAX_ARGS]="shell=";
+	char readme_path[MAX_ARGS]="readme_path=";
+	char newpath[MAX_ARGS*1000];
+	int k;  
+	strcpy(newpath,getenv("PATH"));
+	strcat(newpath,":");
+	if(strcmp(argv[0],"./myshell")&&strcmp(argv[0],"myshell")) 
+	{                 
+		k=strlen(argv[0]);  
+		while(k&&argv[0][k]!='/')
+		 k-- ; 
+		argv[0][k]='\0';           
+		strcpy(pwd,argv[0]);    
+		get_fullpath(pwd, argv[0]);  
+		printf("%s\n",pwd);  
 	}
-}
+	else
+		strcpy(pwd,getenv("PWD"));    
+	//environments and directories
+	strcat(newpath,pwd);   
+	setenv("PATH",newpath,1);// adds PATH as an environment variable
+	strcat(shell_path,pwd);
+	strcat(shell_path,"/myshell");
+	putenv(shell_path);           
+	strcat(readme_path, pwd);
+	
+	
+	else
+	{
+		clear( );
+		fprintf(stderr, "This is fillshell, the shell that fills your needs");          
+	}
+    return 0 ; 
+} 
+
