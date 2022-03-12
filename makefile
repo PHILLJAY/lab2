@@ -2,5 +2,6 @@
 # William Robinson, 100751756
 # Laith Hasan, 100738896
 #Operating Systems Lab 2
-fillshell: fillshell.c fillshell.h utility.h
-	gcc -o myshell fillshell.c utility.h
+
+fillshell: fillshell.c utility.c fillshell.h
+	gcc -o fillshell.c utility.c -o myshell
